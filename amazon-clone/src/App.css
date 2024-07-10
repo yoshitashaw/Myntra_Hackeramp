@@ -1,0 +1,301 @@
+/* *{
+  margin: 0;
+}
+
+.header{
+  background-color: #131327
+}
+
+.header__logo{
+  width: 100px;
+  margin-right: 10px;
+  margin-left: 10px;
+} */
+
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #131921;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__logo {
+  width: 100px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+.header__search {
+  display: flex;
+  flex: 1;
+  background-color: white;
+  align-items: center;
+  /* flex-grow: 1;
+  border-radius: 10px;
+  padding: 3px;
+  margin-right: 20px; */
+}
+
+.header__searchInput {
+  flex-grow: 1;
+  height: 12px;
+  border: none;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+.header__searchIcon {
+  padding: 5px;
+  background-color: #f7a547;
+}
+
+.header__nav{
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+
+.header__link{
+  color: white;
+  text-decoration: none;
+}
+
+.header__option{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header__optionLineOne{
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.header__optionBasket{
+  display: flex;
+  align-items: center;
+}
+
+.header__basketCount{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.home__imageContainer {
+  width: 100%;
+  position: relative;
+  margin-bottom: -150px;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden; /* Ensure the overlay image stays within the banner */
+  /* mask-image: linear-gradient(to bottom, rgb(0, 0, 0,1), rgba(0,0,0,0)); */
+}
+
+.home__bannerImage {
+  width: 100%; /* Ensure the banner image fits its container */
+  display: block;
+  z-index: -1;
+  margin-bottom: -100px;  /*Product components glide over the banner image */
+}
+
+.home__overlayImage {
+  position: absolute;
+  top: 1%;  
+  left: 85%; 
+  transform: translate(-50%, -20%); /* Center the overlay image */
+  width: 80%; 
+  opacity: 0.9; /*Adjust the opacity*/
+}
+
+.home__row{
+  display: flex;
+  z-index: 1;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.product{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  max-height: 400px;
+  min-width: 100px;
+  margin: 10px;
+  padding: 20px;
+  width: 100%;
+  z-index: 1;
+  background-color: #edececb9;
+}
+
+.product__rating{
+  display: flex;
+}
+
+.product__info{
+  height:100px;
+  margin-bottom: 15px;
+}
+
+.product > img{
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.product__price{
+  margin-top: 5px;
+}
+
+.product > button{
+  background-color: #f7a72f; 
+  border: 1px;
+  border-color: #a88734 #9c7e31 #846a29;
+  border: 1px solid;
+}
+
+.checkout{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.checkoutProduct{
+  display: flex;
+  margin-left: 10px;
+}
+
+.checkout_image{
+  object-fit: contain;
+  width: 180px;
+  height: 180px;
+}
+
+.checkoutProduct_info > button{
+  background-color: #f7a72f; 
+  border: 1px;
+  border-color: #a88734 #9c7e31 #846a29;
+  margin-top: 10px;
+  margin-left: 30px;
+  color: #111;
+  border: 1px solid;
+}
+
+.checkoutProduct_rating{
+  display: flex;
+  margin-left: 10px; 
+}
+
+.checkoutProduct_title{
+  font-size: 17px;
+  font-weight: 800;
+  margin-left: 10px;
+}
+
+.checkoutProduct_price{
+  font-size: 17px;
+  font-weight: 800;
+  margin-left: 10px;
+}
+
+/* Posts.css */
+.video-container{
+  height: 80vh;
+  border-radius: 20px;
+  background-color: white;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+}
+
+.video-container::-webkit-scrollbar {
+  display: none;
+}
+
+.videos{
+  position: relative;
+}
+
+.fa{
+  position: absolute;
+  bottom: 7%;
+  left: 10%;
+}
+
+.fa h4{
+  margin: 0;
+  color: white;
+  margin-top: 8%;
+  margin-left: 25%;
+}
+
+.icon-styling{
+  position: absolute;
+  bottom: 2%;
+  left: 12%;
+}
+
+.like{
+  cursor: pointer;
+  color : #e74c3c
+}
+
+.unlike{
+  cursor: pointer;
+  color: white;
+}
+
+.chat-styling{
+  color: white;
+  position: absolute;
+  bottom: 2%;
+  left: 25%;
+}
+
+.modal-container{
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.video-modal{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-modal video{
+  height: 85vh;
+}
+
+.comment-modal{
+  width: 50%;
+  height: 100%;
+}
+
+.unlike2{
+  color: black;
+  cursor: pointer;
+}
+
+.card1{
+  height: 70vh;
+}
+
+/* Video.css */
+.videos-styling{
+  width: 100%;
+  height: 80vh;
+  scroll-snap-align: start;
+}
