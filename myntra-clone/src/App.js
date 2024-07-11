@@ -5,6 +5,7 @@ import Header from "./Components/Header";
 import Feed from "./Components/Feed";
 import Home from "./Components/Home";
 import Checkout from "./Components/Checkout";
+import Login from "./Components/Login";
 
 function App() {
   return (
@@ -18,7 +19,11 @@ function App() {
             </>
             } />
 
-          {/* <Route path="/login" element={<h1>LOGIN PAGE!!</h1>} /> */}
+          <Route path="/login" element={
+            <>
+              <Login />
+            </>
+          } />
           
           <Route path="/" element={
             <>

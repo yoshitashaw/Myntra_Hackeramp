@@ -44,5 +44,4 @@ function Ioa() {
         </div>
     )
 }
-
-export default Ioa
+export default Ioa;

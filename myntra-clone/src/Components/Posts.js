@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { firestore } from '../firebase';
+import { database } from '../firebase';
 import CircularProgress from '@mui/material/CircularProgress';
 import Video from './Video';
 import '../App.css';
@@ -21,17 +21,18 @@ function Posts({ userData }) {
         setOpen(null);
     };
 
-    useEffect(() => {
-        const unsub = firestore.collection('posts').orderBy('createdAt', 'desc').onSnapshot((querySnapshot) => {
-            const parr = [];
-            querySnapshot.forEach((doc) => {
-                let data = { ...doc.data(), postId: doc.id };
-                parr.push(data);
-            });
-            setPosts(parr);
-        });
-        return () => unsub();
-    }, []);
+    useEffect(()=>{
+            let parr = []
+            const unsub = database.posts.orderBy('createdAt','desc').onSnapshot((querySnapshot)=>{
+                parr = []
+                querySnapshot.forEach((doc)=>{
+                    let data = {...doc.data(),postId:doc.id}
+                    parr.push(data)
+                })
+                setPosts(parr)
+            })
+            return unsub
+    },[]);
 
     const callback = (entries) => {
         entries.forEach((entry) => {
@@ -102,7 +103,6 @@ function Posts({ userData }) {
         </div>
     );
 }
-
 export default Posts;
 
 
