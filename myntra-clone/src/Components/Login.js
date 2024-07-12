@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext,Image } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import { makeStyles } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 import Alert from '@mui/material/Alert';
 import '../App.css'
 import insta from '../Assets/Instagram.png'
@@ -19,7 +19,7 @@ import img1 from '../Assets/img1.png';
 import img2 from '../Assets/img2.png';
 import img3 from '../Assets/img3.png';
 import { AuthContext } from '../Context/AuthContext';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
     const store = useContext(AuthContext)
@@ -42,7 +42,7 @@ function Login() {
     const [password,setPassword] = useState('');
     const [error,setError] = useState('');
     const [loading,setLoading] = useState(false);
-    const history = useHistory();
+    const navigate = useNavigate();
     const {login} = useContext(AuthContext);
 
     const handleClick = async() => {
@@ -51,7 +51,7 @@ function Login() {
             setLoading(true)
             let res = await login(email,password);
             setLoading(false);
-            history.push('/')
+            navigate('/')
         }catch(err){
             setError(err);
             setTimeout(()=>{

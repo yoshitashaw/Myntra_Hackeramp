@@ -2,11 +2,11 @@ import React from "react";
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./Components/Header";
-import Feed from "./Components/Feed";
+// import Feed from "./Components/Feed";
 import Home from "./Components/Home";
 import Checkout from "./Components/Checkout";
 import Login from "./Components/Login";
-
+import Ioa from "./Components/Ioa";
 function App() {
   return (
     <Router>
@@ -35,7 +35,7 @@ function App() {
             <Route path="/posts" element={
               <>
                 <Header />
-                <Feed />
+                <Ioa />
               </>
             } />
         </Routes> 
