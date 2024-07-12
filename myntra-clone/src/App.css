@@ -144,6 +144,7 @@
 .product__info{
   height:100px;
   margin-bottom: 15px;
+  font-size: 20px;
 }
 
 .product > img{
