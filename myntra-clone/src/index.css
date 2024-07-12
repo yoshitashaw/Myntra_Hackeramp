@@ -1,4 +1,8 @@
 body {
+  background: linear-gradient(45deg, rgb(220, 121, 250), #f8df9e); /* Example gradient */
+  min-height: 100vh; /* Ensure it covers the full height */
+  display: flex;
+  flex-direction: column;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -17,6 +21,6 @@ code {
   background-color: aliceblue;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 3px;
   align-items: center;
 }

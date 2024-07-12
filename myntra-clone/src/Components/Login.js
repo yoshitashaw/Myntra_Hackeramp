@@ -18,6 +18,10 @@ import bg from '../Assets/insta.png'
 import img1 from '../Assets/img1.png';
 import img2 from '../Assets/img2.png';
 import img3 from '../Assets/img3.png';
+import img4 from '../Assets/img4.png';
+import img5 from '../Assets/img5.png';
+import img6 from '../Assets/img6.png';
+import img7 from '../Assets/img7.png';
 import { AuthContext } from '../Context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
@@ -67,7 +71,7 @@ function Login() {
               <div className="car">
                 <CarouselProvider
                     visibleSlides={1}
-                    totalSlides={5}
+                    totalSlides={7}
                     // step={3}
                     naturalSlideWidth={238}
                     naturalSlideHeight={423}
@@ -78,9 +82,13 @@ function Login() {
                     touchEnabled={false}
                 >
                     <Slider>
-                    <Slide index={0}><Image src={img1}/></Slide>
-                    <Slide index={1}><Image src={img2}/></Slide>
-                    <Slide index={2}><Image src={img3}/></Slide>
+                        <Slide index={0}><Image src={img1}/></Slide>
+                        <Slide index={1}><Image src={img2}/></Slide>
+                        <Slide index={2}><Image src={img3}/></Slide>
+                        <Slide index={3}><Image src={img4}/></Slide>
+                        <Slide index={4}><Image src={img5}/></Slide>
+                        <Slide index={5}><Image src={img6}/></Slide>
+                        <Slide index={6}><Image src={img7}/></Slide>
                     </Slider>
                 </CarouselProvider>
               </div>
