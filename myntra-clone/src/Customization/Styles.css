@@ -88,11 +88,7 @@ body {
     border-radius: 8px;
     margin-bottom: 1rem;
   }
-  /* General styles */
-body {
-    font-family: Arial, sans-serif;
-  }
-  
+
   /* Designs component styles */
   .designs-container {
     padding: 1rem;
@@ -113,22 +109,23 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1rem;
+
   }
   .designs-grid h2 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1rem;
     text-transform: uppercase;
-    color: #f867b2;
+    color: #f2711c;
   }
+ 
   .design-item p{
     
     text-transform: capitalize;
   }
   .design-item span{
-    border-radius: 3rem;
-    border-color: #f867b2;
-    text-transform: lowercase;
+    color: #42e4ed;
+    text-transform: capitalize;
   }
   .design-item {
     background-color: #333;
