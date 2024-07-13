@@ -57,7 +57,12 @@ function Header() {
                 <span className="header__optionLineTwo">Review</span>
               </div>
             </Link>
-
+ <Link to="/customization" className="header__link">
+          <div className="header__option">
+            <span className="header__optionLineOne">Design</span>
+            <span className="header__optionLineTwo">Customization</span>
+          </div>
+        </Link>
             <Link to="/checkout" className="header__link">
               <div className="header__optionBasket">
                 {/* Basket icon */}
