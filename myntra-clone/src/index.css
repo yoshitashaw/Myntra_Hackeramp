@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(45deg, rgb(220, 121, 250), #f8df9e); /* Example gradient */
+  background: linear-gradient(45deg, rgb(255, 255, 255), #ffffff); /* Example gradient */
   min-height: 100vh; /* Ensure it covers the full height */
   display: flex;
   flex-direction: column;

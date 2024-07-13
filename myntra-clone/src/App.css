@@ -22,7 +22,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: linear-gradient(to right, #f67291, #f7c5d0,#fbfbfb, #f7c5d0, #f67291);   
+  background: white;   
 }
 
 .header__logo {

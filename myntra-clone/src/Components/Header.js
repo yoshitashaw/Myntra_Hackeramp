@@ -5,7 +5,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import { useStateValue } from "../StateProvider";
 import { AuthContext } from "../Context/AuthContext";
-import logo from "./logo.png";
+import logo from "./myntralogo.png";
 import "../App.css";
 
 function Header() {
