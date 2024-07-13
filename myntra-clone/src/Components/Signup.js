@@ -4,7 +4,6 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { Button, CardActions } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 import Alert from '@mui/material/Alert';
 import '../App.css';
 import insta from '../Assets/Instagram.png';
@@ -15,17 +14,7 @@ import { AuthContext } from '../Context/AuthContext';
 import { database, storage } from '../firebase';
 
 export default function Signup() {
-    const useStyles = makeStyles({
-        text1: {
-            color: 'grey',
-            textAlign: 'center'
-        },
-        card2: {
-            height: '5vh',
-            marginTop: '2%'
-        }
-    });
-    const classes = useStyles();
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
@@ -92,7 +81,7 @@ export default function Signup() {
                         <img src={insta} alt="" />
                     </div>
                     <CardContent>
-                        <Typography className={classes.text1} variant="subtitle1">
+                        <Typography variant="subtitle1">
                             Sign up to Shopp!!
                         </Typography>
                         {error && <Alert severity="error">{error}</Alert>}
@@ -110,14 +99,14 @@ export default function Signup() {
                         </Button>
                     </CardActions>
                     <CardContent>
-                        <Typography className={classes.text1} variant="subtitle1">
+                        <Typography variant="subtitle1">
                             By signing up, you agree to our Terms, Conditions and Cookies policy.
                         </Typography>
                     </CardContent>
                 </Card>
-                <Card variant="outlined" className={classes.card2}>
+                <Card variant="outlined">
                     <CardContent>
-                        <Typography className={classes.text1} variant="subtitle1">
+                        <Typography variant="subtitle1">
                             Having an account ? <Link to="/login" style={{ textDecoration: 'none' }}>Login</Link>
                         </Typography>
                     </CardContent>
@@ -223,7 +212,7 @@ export default function Signup() {
 //                     <img src={insta} alt="" />
 //                 </div>
 //                 <CardContent>
-//                     <Typography className={classes.text1} variant="subtitle1">
+//                     <Typography variant="subtitle1">
 //                         Sign up to Shopp!!
 //                     </Typography>
 //                     {error!='' && <Alert severity="error">{error}</Alert>}
@@ -241,14 +230,14 @@ export default function Signup() {
 //                     </Button>
 //                 </CardActions>
 //                 <CardContent>
-//                     <Typography className={classes.text1} variant="subtitle1">
+//                     <Typography variant="subtitle1">
 //                         By signing up, you agree to our Terms, Conditions and Cookies policy.
 //                     </Typography>
 //                 </CardContent>
 //             </Card>
 //             <Card variant="outlined" className={classes.card2}>
 //                 <CardContent>
-//                     <Typography className={classes.text1} variant="subtitle1">
+//                     <Typography variant="subtitle1">
 //                         Having an account ? <Link to="/login" style={{textDecoration:'none'}}>Login</Link>
 //                     </Typography>
 //                 </CardContent>
