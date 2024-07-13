@@ -2,6 +2,8 @@ import React, { createContext, useState, useEffect } from "react";
 
 export const DesignContext = createContext();
 
+const MAX_DESIGNS = 20;
+
 export const DesignProvider = ({ children }) => {
   const [designs, setDesigns] = useState([]);
 
@@ -11,7 +13,14 @@ export const DesignProvider = ({ children }) => {
   }, []);
 
   const addDesign = (newDesign) => {
-    const updatedDesigns = [...designs, newDesign];
+    let updatedDesigns = [...designs, newDesign];
+
+    if (updatedDesigns.length > MAX_DESIGNS) {
+      updatedDesigns = updatedDesigns.slice(
+        updatedDesigns.length - MAX_DESIGNS
+      );
+    }
+
     setDesigns(updatedDesigns);
     localStorage.setItem("designs", JSON.stringify(updatedDesigns));
   };

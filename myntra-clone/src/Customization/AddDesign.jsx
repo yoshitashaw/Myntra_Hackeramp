@@ -24,14 +24,14 @@ const AddDesign = () => {
         img: reader.result,
       };
       addDesign(newDesign);
-      // Reset form fields
+
       setTitle("");
       setName("");
       setEmail("");
       setPriceRange("");
       setImage(null);
-      // Redirect to the Designs component
-      navigate("/customization"); // Redirect to the Home component
+
+      navigate("/customization");
     };
     if (image) {
       reader.readAsDataURL(image);
