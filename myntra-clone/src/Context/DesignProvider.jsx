@@ -1,12 +1,19 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 
 export const DesignContext = createContext();
 
 export const DesignProvider = ({ children }) => {
   const [designs, setDesigns] = useState([]);
 
-  const addDesign = (design) => {
-    setDesigns((prevDesigns) => [...prevDesigns, design]);
+  useEffect(() => {
+    const storedDesigns = JSON.parse(localStorage.getItem("designs")) || [];
+    setDesigns(storedDesigns);
+  }, []);
+
+  const addDesign = (newDesign) => {
+    const updatedDesigns = [...designs, newDesign];
+    setDesigns(updatedDesigns);
+    localStorage.setItem("designs", JSON.stringify(updatedDesigns));
   };
 
   return (
