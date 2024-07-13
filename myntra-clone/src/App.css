@@ -395,3 +395,97 @@
       width: 35%;
   }
 }
+
+/* Ios.css */
+.video-containerss {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.videos {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.video-actions {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.like-button {
+  background-color: transparent;
+  border: none;
+  color: red;
+  font-size: 45px;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  transition: transform 0.3s;
+}
+
+.like-button:active {
+  transform: scale(2.2);
+}
+
+.hearts {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+.heart {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  animation: fly 1s linear forwards;
+  opacity: 0;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.heart:before {
+  top: -10px;
+  left: 0;
+}
+
+.heart:after {
+  left: 10px;
+  top: 0;
+}
+
+@keyframes fly {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(var(--directionX) * 1px), calc(var(--directionY) * 1px)) scale(0.5);
+    opacity: 0;
+  }
+}
+
+
+
+
+
