@@ -4,8 +4,7 @@ import vid2 from './videos/vid2.mp4';
 import vid3 from './videos/vid3.mp4';
 import vid4 from './videos/vid4.mp4';
 import vid5 from './videos/vid5.mp4';
-import '../App.css'; // Import the CSS file
-
+import '../App.css'; 
 function Ioa() {
     const handleLike = (index) => {
         animateHearts(index);
