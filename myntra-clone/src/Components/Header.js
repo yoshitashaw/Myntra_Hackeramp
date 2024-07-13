@@ -1,17 +1,17 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { IconButton, InputBase } from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
-import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
-import { useStateValue } from '../StateProvider';
-import { AuthContext } from '../Context/AuthContext';
-import logo from './logo.png';
-import '../App.css';
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { IconButton, InputBase } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
+import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+import { useStateValue } from "../StateProvider";
+import { AuthContext } from "../Context/AuthContext";
+import logo from "./logo.png";
+import "../App.css";
 
 function Header() {
   const [{ basket }] = useStateValue();
   const { user, logout } = useContext(AuthContext);
-  console.log(user)
+  console.log(user);
   const handleLogout = () => {
     logout();
   };
@@ -28,7 +28,7 @@ function Header() {
         <InputBase
           className="header__searchInput"
           placeholder="Search…"
-          inputProps={{ 'aria-label': 'search' }}
+          inputProps={{ "aria-label": "search" }}
         />
         <IconButton type="button" aria-label="search">
           <SearchIcon className="header__searchIcon" />
@@ -40,8 +40,12 @@ function Header() {
         {user ? (
           <>
             <div className="header__option">
-              <span className="header__optionLineOne">Hello {user?.displayName ? user.displayName : user.email}</span>
-              <span className="header__optionLineTwo" onClick={handleLogout}>Sign Out</span>
+              <span className="header__optionLineOne">
+                Hello {user?.displayName ? user.displayName : user.email}
+              </span>
+              <span className="header__optionLineTwo" onClick={handleLogout}>
+                Sign Out
+              </span>
             </div>
 
             <Link to="/" className="header__link">
@@ -57,12 +61,12 @@ function Header() {
                 <span className="header__optionLineTwo">Review</span>
               </div>
             </Link>
- <Link to="/customization" className="header__link">
-          <div className="header__option">
-            <span className="header__optionLineOne">Design</span>
-            <span className="header__optionLineTwo">Customization</span>
-          </div>
-        </Link>
+            <Link to="/customization" className="header__link">
+              <div className="header__option">
+                <span className="header__optionLineOne">Design</span>
+                <span className="header__optionLineTwo">Customization</span>
+              </div>
+            </Link>
             <Link to="/checkout" className="header__link">
               <div className="header__optionBasket">
                 {/* Basket icon */}
@@ -88,7 +92,6 @@ function Header() {
 
 export default Header;
 
-
 // import React from 'react';
 // import '../App.css';
 // import logo from './logo.png';
@@ -107,7 +110,7 @@ export default Header;
 //       {/* Logo on the NavBar */}
 //       <Link to="/">
 //         <img className="header__logo" src={logo} alt="Logo" />
-//       </Link> 
+//       </Link>
 
 //       {/* Search Bar */}
 //       <div className="header__search">
@@ -154,8 +157,6 @@ export default Header;
 //           </div>
 //         </Link>
 //       </div>
-
-
 
 //     </nav>
 //   );

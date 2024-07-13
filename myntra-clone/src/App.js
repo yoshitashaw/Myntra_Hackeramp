@@ -3,7 +3,8 @@ import "./App.css";
 import "./Customization/Styles.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./Components/Header";
-import Home from "./Customization/Home.jsx";
+import HomePage from "./Components/Home";
+import Home from "./Customization/Home";
 import Checkout from "./Components/Checkout";
 import Login from "./Components/Login";
 import Ioa from "./Components/Ioa";
@@ -28,7 +29,7 @@ function App() {
             element={
               <>
                 <Header />
-                <Home />
+                <HomePage />
               </>
             }
           />
