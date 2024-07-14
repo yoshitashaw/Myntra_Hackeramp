@@ -12,11 +12,11 @@ function Checkout() {
         <img className="checkout__ad" src={checkout_banner} alt="CheckoutBanner" />
             {basket?.length === 0 ? (
                 <div>
-                    <h2>Your Shopping Basket is Empty</h2>
+                    <h2 className="checkout_title">  YOUR SHOPPING BASKET IS EMPTY!</h2>
                 </div>
             ) : (
                 <div>
-                    <h2 className="checkout_title">Your Shopping Basket</h2>
+                    <h2 className="checkout_title">YOUR SHOPPING BASKET</h2>
                         {basket.map(item =>{
                             return(
                                 <CheckoutProduct 
