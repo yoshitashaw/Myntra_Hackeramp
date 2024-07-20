@@ -50,21 +50,21 @@ function Header() {
 
             <Link to="/" className="header__link">
               <div className="header__option">
-                <span className="header__optionLineOne">Returns</span>
-                <span className="header__optionLineTwo">& Orders</span>
+                <span className="header__optionLineOne">RETURNS</span>
+                <span className="header__optionLineTwo">& ORDERS</span>
               </div>
             </Link>
 
             <Link to="/posts" className="header__link">
               <div className="header__option">
-                <span className="header__optionLineOne">Reels</span>
-                <span className="header__optionLineTwo">Review</span>
+                <span className="header__optionLineOne">REELS</span>
+                <span className="header__optionLineTwo">REVIEW</span>
               </div>
             </Link>
             <Link to="/customization" className="header__link">
               <div className="header__option">
-                <span className="header__optionLineOne">Design</span>
-                <span className="header__optionLineTwo">Customization</span>
+                <span className="header__optionLineOne">DESIGN</span>
+                <span className="header__optionLineTwo">CUSTOMIZATION</span>
               </div>
             </Link>
             <Link to="/checkout" className="header__link">

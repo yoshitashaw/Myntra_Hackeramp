@@ -8,6 +8,7 @@ import Home from "./Customization/Home";
 import Checkout from "./Components/Checkout";
 import Login from "./Components/Login";
 import Ioa from "./Components/Ioa";
+import Subtotal from "./Components/Subtotal";
 
 function App() {
   return (
