@@ -4,4 +4,5 @@ Our model strives to build features that make Myntra a socially connecting platf
   - CUSTOMIZED DESIGN SECTION: Customers can upload images and details of the clothing designs they desire. Small designers will then review these requests and reach out to potential clients, offering their services.
 
 The languages and tools used in this webpage are:
+
 [![My Skills](https://skillicons.dev/icons?i=js,html,css,react,firebase)](https://skillicons.dev)
